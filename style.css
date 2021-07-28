@@ -15,41 +15,55 @@ body {
 }
 
 /*header*/
-#header{
+#header {
   display: flex;
   justify-content: space-between;
+  height: 50px;
+  position: relative;
+}
+
+h2 {
+  font-size: 0.9em;
+}
+h3 {
+  font-size: 0.7em;
 }
 .navigation {
   display: flex;
+  position: absolute;
+  right: 15px;
 }
 nav {
   display: flex;
-  padding-right: 0;
 }
 nav ul {
   display: flex;
   list-style-type: none;
   margin-top: 0;
-  margin-right: 20px;
+  margin-right: 15px;
 }
-nav ul li{
-  border-top:solid 2.5px transparent;
-  padding: 15px 20px 0px 0px;
+nav ul li {
+  border-top: solid 2.5px transparent;
+  padding: 4px;
 }
-nav ul li:hover{
+nav ul li:hover {
   border-top: solid 2.5px #0065fc;
 }
-.menu a:hover{
+.menu a:hover {
   color: #0065fc;
 }
-.sinscrire{
-  font-weight:bolder;
+.sinscrire {
+  font-weight: bolder;
   font-size: 16px;
   color: #0065fc;
-  float: right;
-  margin-right:5px;
-  padding-top:11px;
 }
+
+.header__logo {
+  position: absolute;
+  height: 50px;
+  left: 15px;
+}
+
 #header a {
   text-decoration: none;
   color: black;
@@ -57,29 +71,12 @@ nav ul li:hover{
 
 p {
   font-style: normal;
-  
 }
 strong {
   font-weight: bold;
   color: #0065fc;
 }
 
-#header {
-  display: flex;
-  height: 61px;
-  justify-content: space-between;
-  margin-left: 2%;
-  margin-top: 2%;
-}
-
-
-
-#header__nav {
-  display: flex;
-  width: auto;
-  position: absolute;
-  right: 5px;
-}
 /*Trouver-votre-hebergement*/
 
 #trouvez__hebergement {
@@ -89,7 +86,7 @@ strong {
 .recherche {
   display: flex;
   height: 50px;
-  margin-bottom: 20px;
+  margin-top: 10px;
 }
 .fa-map-marker-alt {
   color: black;
@@ -102,7 +99,7 @@ strong {
   justify-content: center;
   font-size: 1.2em;
 }
-#loupe{
+#loupe {
   display: none;
 }
 .position {
@@ -133,23 +130,29 @@ strong {
   cursor: pointer;
 }
 /*liste filtres*/
-.filter__header{
+.filter__header {
   float: left;
-  margin-right: 1%;
-  padding-top: 20px;
+  margin-right: 15px;
+  line-height: 60px;
 }
 #liste__filtres {
   width: auto;
   flex-direction: row;
   font-weight: normal;
   display: inline-flex;
+  padding: 0px;
 }
 #filtres {
   text-align: left;
   align-content: center;
   align-items: center;
-  /*! font-weight: normal; */
-  padding-left: 15px;
+  margin-left: 15px;
+}
+#filtres span {
+  font-size: 0.9em;
+  line-height: 29px;
+  height: 29px;
+  display: inline-block;
 }
 .option__filtre {
   border-top: 2px #f2f2f2 solid;
@@ -159,6 +162,11 @@ strong {
   font-weight: bold;
   border-right: 2px #f2f2f2 solid;
   border-bottom: 2px #f2f2f2 solid;
+  display: flex;
+  padding-right: 10px;
+  padding-left: 35px;
+  position: relative;
+  overflow: hidden;
 }
 
 .option__filtre i {
@@ -170,9 +178,10 @@ strong {
   height: 30px;
   text-align: center;
   font-size: 12px;
-  vertical-align: middle;
   line-height: 30px;
   float: left;
+  position: absolute;
+  left: 0px;
 }
 
 .option__filtre:hover {
@@ -207,15 +216,14 @@ strong {
 }
 
 #container__principal {
-  display: flex;
-  width: 97%;
+  display: inline-flex;
+  width: auto;
   height: auto;
-  margin-left: 1.5%;
-  margin-right: 1.5%;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
-
-#bloc__vignettes_hebergement{
+#bloc__vignettes_hebergement {
   justify-content: space-evenly;
   margin-bottom: 20px;
   display: flex;
@@ -224,19 +232,18 @@ strong {
 #hebergement a {
   text-decoration: none;
   color: black;
-  margin-bottom: 15px;
+  margin: 0px;
 }
 
-#hebergement h3{
-
-  font-size: 0.8em;
+#hebergement h3 {
+  font-size: 0.9em;
   margin-left: 5px;
   margin-top: 2px;
   padding-bottom: 0;
   margin-bottom: 0;
 }
-#hebergement p{
-  font-size: 0.7em;
+#hebergement p {
+  font-size: 0.8em;
   margin-left: 5px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -249,9 +256,12 @@ strong {
   display: inline-block;
   width: 60%;
 }
-#hebergement h1{
-  margin-left:13px;
+#hebergement h1 {
+  margin-left: 20px;
   font-size: 1.2em;
+}
+.option__hebergement {
+  padding-left: 15px;
 }
 
 .figcaption__hebergement strong {
@@ -261,7 +271,6 @@ strong {
 
 .figcaption__hebergement {
   color: black;
- 
 }
 
 h1.titre {
@@ -270,19 +279,19 @@ h1.titre {
 
 .element img {
   width: 100%;
-  height: 59%;
+  height: 11vw;
   border-radius: 20px 20px 0px 0px;
   object-fit: cover;
 }
 
 .element {
-  width: 16.5vw;
-  height: 13vw;
+  width: 17.5vw;
+  height: 150%;
   background-color: white;
   border-radius: 20px;
-  padding: 3px;
+  padding: 5px;
   box-shadow: 2px 2px 5px gray;
-  margin: 10px 0 25px 0;
+  margin: 10px 5px 25px 5px;
 }
 
 .figcaption__hebergement h2 {
@@ -292,20 +301,16 @@ h1.titre {
 .bluestar {
   color: #0065fc;
   font-size: 70%;
-  
 }
 .greystar {
-  color: grey;
+  color: gray;
   font-size: 70%;
   margin-top: 0px;
 }
-#rating__stars {
-  margin-left:5px;
+.rating__stars {
+  margin-left: 5px;
 }
 
-#rating__stars_populaire {
-  margin-top: 15px;
-}
 .figcaption__logement strong {
   color: black;
   font-weight: bold;
@@ -314,21 +319,30 @@ h1.titre {
 #populaires a {
   text-decoration: none;
   color: black;
-  margin-bottom: 15px;
+  width: 100%;
 }
 #populaires {
-  flex-direction: column;
   margin-left: 25px;
-  width: 30%;
+  width: 33%;
   background-color: #f2f2f2;
   padding: 20px;
   border-radius: 20px;
   display: inline-block;
 }
-#populaires h1{
-  margin-left:9px;
+.rating__stars_populaire {
+  margin-top: 70px;
+  position: absolute;
+  top: 35px;
+
+  left: 1px;
 }
-#bloc__vignettes_logements{
+#populaires h1 {
+  margin-left: 9px;
+}
+#populaires h3 {
+  font-size: 0.9em;
+}
+#bloc__vignettes_logements {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -337,7 +351,7 @@ h1.titre {
   float: right;
 }
 .logement img {
-   width: 40%;
+  width: 40%;
   height: 100%;
   border-radius: 20px 0px 0px 20px;
   object-fit: cover;
@@ -347,23 +361,28 @@ h1.titre {
 }
 
 .logement {
-  display: inline-block;
-  height: 100px;
+  display: flex;
+  height: 150px;
   background-color: white;
   border-radius: 20px;
-  padding: 0.35em;
+  padding: 1%;
   box-shadow: 2px 2px 5px grey;
-  width: 90%;
+  width: 98%;
   margin-bottom: 20px;
   margin-top: 10px;
+  position: relative;
+}
+.figcaption__logement {
+  position: relative;
+  width: 60%;
 }
 .figcaption__logement h3 {
   margin-left: 0px;
 }
 
-.logement p{
-  font-size: 0.7em;
-  margin-left: 5px;
+.logement p {
+  font-size: 0.8em;
+  margin-left: 1px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -376,58 +395,54 @@ h1.titre {
 #container__secondaire {
   display: flex;
   flex-wrap: wrap;
-  width:95%;
+  width: 95%;
   height: auto;
   margin: 10px auto 50px auto;
 }
 
 #activites {
   display: flex;
-  margin:auto;
+  margin: auto;
   justify-content: space-between;
 }
-.titre_activites
-{
+.titre_activites {
   font-size: 1.5em;
   width: 100%;
   height: 25px;
-  
 }
-.big__picture{
+.big__picture {
   width: 22%;
   box-shadow: 2px 2px 5px grey;
   border-radius: 20px 20px 20px 20px;
-  
 }
-.activites__big_picture{
+.activites__big_picture {
   margin-left: 0px;
   margin-right: 0px;
-  margin-top:0px
+  margin-top: 0px;
 }
 .big__picture img {
   object-fit: cover;
-  height:350px;
+  height: 350px;
   border-radius: 20px 20px 0px 0px;
   width: 100%;
 }
-.second__column{
+.second__column {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
   padding: 0;
-  width:22%;
+  width: 22%;
   border-radius: 20px 20px 20px 20px;
-  
 }
-.activites__medium_picture{
+.activites__medium_picture {
   height: 50%;
   box-shadow: 2px 2px 5px grey;
   border-radius: 20px 20px 20px 20px;
-  margin:0px;
+  margin: 0px;
 }
-.activites__small_picture{
-  margin:0px;
+.activites__small_picture {
+  margin: 0px;
   height: 41%;
   box-shadow: 2px 2px 5px grey;
   border-radius: 20px 20px 20px 20px;
@@ -437,7 +452,6 @@ h1.titre {
   object-fit: cover;
   height: 118px;
   border-radius: 20px 20px 0px 0px;
-  
 }
 
 .activites__medium_picture img {
@@ -446,10 +460,9 @@ h1.titre {
   border-radius: 20px 20px 0px 0px;
   width: 100%;
 }
-.figcaption__activites{
+.figcaption__activites {
   margin-left: 20px;
 }
-
 
 /*footer*/
 #footer {
@@ -466,134 +479,335 @@ h1.titre {
 }
 li {
   list-style-type: none;
-  margin: 10px;
+  margin: 10px 20px 10px 0px;
   width: 100%;
-}
-h2 {
-  font-size: 0.9em;
-}
-h3 {
-  font-size: 0.7em;
 }
 #footer h2 {
   font-size: 1em;
-  margin-left: 50px;
-}
-#filtres span {
-  font-size: 0.9em;
-  margin: 6px 10px;
+  margin-left: 54px;
 }
 
-/*responsive grand ecran*/
-
-@media all and (min-device-width: 481px)
-{
-  #activites a:nth-child(1),
-#activites a:nth-child(2),
-#activites a:nth-child(4),
-#activites a:nth-child(5)
-{
-  page-break-before: always;
+#footer li {
+  font-size: 1em;
+  margin-left: 15px;
 }
-
-#activites a:nth-child(1) .activites__vignette img,
-#activites a:nth-child(4) .activites__vignette img{
-  height: 310px;
-}
-
-#activites a:nth-child(3) .activites__vignette img,
-#activites a:nth-child(5) .activites__vignette img{
-  height: 100px;
-}
- }
 
 /*responsive smartphone*/
+@media all and (max-width: 600px) {
+  html {
+    overflow-x: hidden;
+  }
+  body {
+    width: 100%;
+    margin: 0px;
+    overflow-x: hidden;
+    padding: 0px;
+  }
 
-@media all and (max-device-width: 480px)
-{
-  .recherche{
-    width: 96%;
-    margin:auto;
+  #header {
+    height: 125px;
+    width: 100%;
+    margin: 0px;
   }
-  .searchbutton{
-    display:none;
+
+  .header__logo {
+    width: 110px;
+    left: 15px;
+    top: 4%;
+    height: auto;
   }
-  #loupe{
+  .navigation {
+    width: 100%;
+    height: 125px;
+    flex-direction: column-reverse;
+    position: initial;
+  }
+
+  .info p {
+    width: 90%;
+  }
+  nav ul {
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 0px;
+  }
+  nav ul li {
+    padding-bottom: 15px;
+    border-bottom: 2px #f2f2f2 solid;
+  }
+  nav ul li:hover {
+    border-bottom: 2px #0065fc solid;
+    padding-bottom: 10px;
+    border-top: 2px transparent solid;
+  }
+  .menu {
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 15px;
+    margin: 0px;
+  }
+
+  nav ul li {
+    border-top: solid 2.5px transparent;
+    padding: 15px 20px 20px 20px;
+  }
+
+  .sinscrire {
+    font-size: 16px;
+    position: absolute;
+    top: 22px;
+    right: 15px;
+  }
+
+  .menu a:hover {
+    color: #0065fc;
+  }
+
+  .recherche {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 0px;
+  }
+  form {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .searchbutton {
+    display: none;
+  }
+  #loupe {
     display: flex;
     align-items: center;
-    width: 30%;
+    width: 20%;
     justify-content: center;
-    border-radius:0px 15px 15px 0px;
+    border-radius: 15px 15px 15px 15px;
     font-size: 1.2em;
-    background-color: #0065FC;
+    background-color: #0065fc;
+    color: white;
+    cursor: pointer;
+  }
+  .filter__header {
+    width: 100%;
+    margin: 25px 0px 15px 5px;
+    line-height: 10px;
   }
   #filtres {
-    width: 60%;
-    background-color: red;
+    width: 100%;
   }
   #liste__filtres {
-    width: 100%;
-    flex-direction: row;
+    width: auto;
     flex-wrap: wrap;
-    font-weight: normal;
-    display: inline-flex;
-  }  
-  
+    margin-top: 0px;
+  }
+  #liste__filtres li {
+    width: auto;
+    flex-wrap: wrap;
+    margin-top: 0px;
+  }
+
   #container__principal {
-    
     flex-direction: column-reverse;
+    margin-left: 0px;
+    margin-right: 0px;
   }
+
   h1.titre {
-  
-  margin: 0 auto 40px 0;
-  width: 100%;
-  
-}
-  
-  #hebergement {
-    width:96%;
-    background-color: white;
-    padding: auto;
-    
+    width: 90%;
+    font-size: 1em;
   }
-  
-  .element {
-    width: 96%;
-    height:100%;
-    padding: auto;
-    box-shadow: 6px 6px 5px grey;
-    
+
+  #hebergement {
+    width: 100%;
+    background-color: white;
+    padding-left: 0px;
+  }
+  #hebergement h1 {
+    font-size: 1em;
   }
   .element img {
-  width: 100%;
-  border-radius: 20px 20px 0px 0px;
-  object-fit: cover;
-}
-  
-  #populaires
-  {
-    width:auto;
-    background-color: #f2f2f2;
-    padding: auto;
+    height: 100px;
+    width: 100%;
+  }
+  .element {
+    height: 160px;
+    width: 92%;
+  }
+
+  #populaires {
+    width: 100%;
+    border-radius: 0px;
+    padding: 0px;
+    margin: 0px;
+  }
+  #populaires h1 {
+    margin-left: 12px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    width: 90%;
   }
   .logement {
-  
-  
-  background-color: white;
-  border-radius: 20px;
+    height: 160px;
+    margin: 10px 20px 25px 15px;
+    width: auto;
   }
-  .logement__second {
-  background-color: white;
-  border-radius: 20px;
-  }
-  
- /*activites a marseille*/ 
-  #activites{
-    display: flex;
-    justify-content: space-between;
-  }
- 
-  
-  
 
+  /*activites a marseille*/
+  .titre_activites {
+    font-size: 1em;
+  }
+  #activites {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .big__picture {
+    margin-bottom: 15px;
+    width: 100%;
+    height: 160px;
+  }
+  .activites__big_picture img {
+    height: 120px;
+  }
+
+  .second__column {
+    width: 100%;
+  }
+  .activites__small_picture img {
+    height: 75%;
+  }
+  .activites__small_picture {
+    height: 160px;
+    margin-bottom: 15px;
+  }
+  .activites__medium_picture img {
+    height: 75%;
+  }
+  .activites__medium_picture {
+    height: 160px;
+    margin-bottom: 15px;
+  }
+  #footer {
+    display: flex;
+    flex-direction: column;
+  }
+  #footer h2 {
+    margin-left: 15px;
+  }
+  .footer__option ul {
+    padding-left: 0px;
+  }
+}
+
+/*responsive ipad*/
+@media all and (min-width: 601px) and (max-width: 800px) {
+  nav ul li {
+    padding-bottom: 25px;
+    border-bottom: 2px #f2f2f2 solid;
+  }
+  nav ul li:hover {
+    border-bottom: 2px #0065fc solid;
+    padding-bottom: 25px;
+    border-top: 2px transparent solid;
+  }
+
+  .filter__header {
+    width: 100%;
+    margin: 25px 0px 5px 5px;
+    line-height: 10px;
+  }
+
+  #liste__filtres {
+    width: auto;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin-top: 0px;
+  }
+
+  #container__principal {
+    flex-direction: column-reverse;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .logement img {
+    margin-right: 0.5px;
+  }
+
+  #populaires {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+  }
+
+  #populaires a {
+    width: 40%;
+  }
+
+  #populaires h3 {
+    font-size: 0.8em;
+  }
+  #populaires p {
+    font-size: 0.7em;
+  }
+  #bloc__vignettes_logements {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .fa-chart-line {
+    float: right;
+  }
+
+  .logement {
+    margin: 10px 10px 10px 10px;
+  }
+
+  .fa-chart-line {
+    float: right;
+    margin-right: 20px;
+  }
+  .logement img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #hebergement {
+    width: 100%;
+    background-color: white;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .element {
+    width: 40%;
+    height: 200px;
+  }
+  .element img {
+    height: 72%;
+  }
+  #container__secondaire {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    height: auto;
+    margin: 10px auto 50px auto;
+  }
+
+  #activites {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .big__picture {
+    width: 46%;
+    margin-bottom: 60px;
+  }
+  .second__column {
+    width: 46%;
+    margin-bottom: 60px;
+  }
 }
