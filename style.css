@@ -10,23 +10,54 @@
 }
 body {
   font-family: "Raleway", sans-serif;
-  width: auto;
+  max-width: 100%;
+  overflow-x: hidden;
 }
-/*header*/
 
+/*header*/
+#header{
+  display: flex;
+  justify-content: space-between;
+}
+.navigation {
+  display: flex;
+}
+nav {
+  display: flex;
+  padding-right: 0;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin-top: 0;
+  margin-right: 20px;
+}
+nav ul li{
+  border-top:solid 2.5px transparent;
+  padding: 15px 20px 0px 0px;
+}
+nav ul li:hover{
+  border-top: solid 2.5px #0065fc;
+}
+.menu a:hover{
+  color: #0065fc;
+}
+.sinscrire{
+  font-weight:bolder;
+  font-size: 16px;
+  color: #0065fc;
+  float: right;
+  margin-right:5px;
+  padding-top:11px;
+}
 #header a {
   text-decoration: none;
   color: black;
 }
-#header a:hover {
-  text-decoration-line: overline;
-  text-decoration-color: #0065fc;
-  color: #0065fc;
-}
+
 p {
   font-style: normal;
-  margin-left: 8px;
-  margin-top: 8px;
+  
 }
 strong {
   font-weight: bold;
@@ -35,19 +66,13 @@ strong {
 
 #header {
   display: flex;
-  width: 100%;
   height: 61px;
+  justify-content: space-between;
+  margin-left: 2%;
+  margin-top: 2%;
 }
 
-.header__logo {
-  padding-left: 15px;
-}
-#header ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  width: auto;
-}
+
 
 #header__nav {
   display: flex;
@@ -64,29 +89,36 @@ strong {
 .recherche {
   display: flex;
   height: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .fa-map-marker-alt {
   color: black;
   background-color: #f2f2f2;
-  height: 32px;
-  width: 60px;
+  min-width: 60px;
   border-radius: 8px 0px 0px 8px;
   margin-right: 0px;
-  text-align: center;
-  padding-top: 15px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2em;
+}
+#loupe{
+  display: none;
 }
 .position {
   display: flex;
 }
 .locationbar {
-  height: 42px;
   border-left: none;
   border-right: none;
-  border-bottom: 1px gray solid;
-  border-top: 1px gray solid;
-
+  border-bottom: 1px #f2f2f2 solid;
+  border-top: 1px #f2f2f2 solid;
   color: black;
+  width: 50%;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: initial;
+  padding-left: 4%;
 }
 .searchbutton {
   font-weight: bold;
@@ -94,14 +126,20 @@ strong {
   background-color: #0065fc;
   border-radius: 0px 8px 8px 0px;
   border: none;
-  height: 45px;
-  width: 100px;
+  width: 130px;
+  font-family: "Raleway", sans-serif;
+  font-size: initial;
+  position: relative;
+  cursor: pointer;
 }
 /*liste filtres*/
-
+.filter__header{
+  float: left;
+  margin-right: 1%;
+  padding-top: 20px;
+}
 #liste__filtres {
   width: auto;
-  display: flex;
   flex-direction: row;
   font-weight: normal;
   display: inline-flex;
@@ -109,19 +147,18 @@ strong {
 #filtres {
   text-align: left;
   align-content: center;
-  display: flex;
   align-items: center;
-
-  font-weight: normal;
+  /*! font-weight: normal; */
+  padding-left: 15px;
 }
 .option__filtre {
-  border: 1px #f2f2f2 solid;
+  border-top: 2px #f2f2f2 solid;
   border-radius: 20px 20px 20px 20px;
   width: auto;
-  list-style: none;
   height: 30px;
-  display: block;
-  padding: 0px 10px 0px 0px;
+  font-weight: bold;
+  border-right: 2px #f2f2f2 solid;
+  border-bottom: 2px #f2f2f2 solid;
 }
 
 .option__filtre i {
@@ -149,29 +186,40 @@ strong {
 /*infos*/
 .fa-info {
   color: #0065fc;
-  border: 1px #f2f2f2 solid;
+  border: 2px #f2f2f2 solid;
   border-radius: 100px;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   text-align: center;
   font-size: 12px;
-  line-height: 30px;
+  line-height: 25px;
   float: left;
   margin-right: 12px;
+  margin-top: 5px;
 }
 .info {
   margin-right: 12px;
-  font-size: 1em;
-  padding-bottom: 0px;
-}
-/*container-hebergements*/
-#container__principal {
-  display: flex;
-  display: inline;
+  font-size: 0.8em;
+  padding-left: 15px;
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-figure {
-  justify-content: left;
+#container__principal {
+  display: flex;
+  width: 97%;
+  height: auto;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+}
+
+
+#bloc__vignettes_hebergement{
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 #hebergement a {
   text-decoration: none;
@@ -179,64 +227,84 @@ figure {
   margin-bottom: 15px;
 }
 
+#hebergement h3{
+
+  font-size: 0.8em;
+  margin-left: 5px;
+  margin-top: 2px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+#hebergement p{
+  font-size: 0.7em;
+  margin-left: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 #hebergement {
   background-color: #f2f2f2;
   padding: 20px;
   border-radius: 20px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 62%;
-  float: left;
+  display: inline-block;
+  width: 60%;
 }
+#hebergement h1{
+  margin-left:13px;
+  font-size: 1.2em;
+}
+
 .figcaption__hebergement strong {
   color: black;
   font-weight: bold;
 }
+
 .figcaption__hebergement {
   color: black;
+ 
 }
+
 h1.titre {
-  font-size: 1.5em;
-  width: 100%;
-  height: 25px;
+  font-size: 1.2em;
 }
+
 .element img {
   width: 100%;
-  height: 140px;
+  height: 59%;
   border-radius: 20px 20px 0px 0px;
   object-fit: cover;
 }
+
 .element {
-  display: flex;
-  flex-direction: column;
-  width: 270px;
-  height: 220px;
+  width: 16.5vw;
+  height: 13vw;
   background-color: white;
   border-radius: 20px;
-  padding: 10px;
-  box-shadow: 6px 6px 5px grey;
-  margin: 0px 15px 40px 0px;
+  padding: 3px;
+  box-shadow: 2px 2px 5px gray;
+  margin: 10px 0 25px 0;
 }
 
 .figcaption__hebergement h2 {
   margin: 6px 1px;
 }
+
 .bluestar {
   color: #0065fc;
+  font-size: 70%;
+  
 }
 .greystar {
   color: grey;
-  margin-left: 0px;
+  font-size: 70%;
+  margin-top: 0px;
 }
 #rating__stars {
-  margin-top: 10px;
+  margin-left:5px;
 }
+
 #rating__stars_populaire {
-  margin-top: 60px;
-}
-#rating__stars_populaire_second {
-  margin-top: 40px;
+  margin-top: 15px;
 }
 .figcaption__logement strong {
   color: black;
@@ -246,76 +314,60 @@ h1.titre {
 #populaires a {
   text-decoration: none;
   color: black;
+  margin-bottom: 15px;
 }
 #populaires {
+  flex-direction: column;
+  margin-left: 25px;
+  width: 30%;
   background-color: #f2f2f2;
+  padding: 20px;
   border-radius: 20px;
+  display: inline-block;
+}
+#populaires h1{
+  margin-left:9px;
+}
+#bloc__vignettes_logements{
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  justify-content: right;
-  margin-left: 5px;
-  width: 30%;
-  float: right;
+  align-items: center;
 }
 .fa-chart-line {
-  padding: 0px 0px 20px 130px;
+  float: right;
 }
 .logement img {
-  width: 40%;
+   width: 40%;
   height: 100%;
   border-radius: 20px 0px 0px 20px;
   object-fit: cover;
+  float: left;
+  padding-right: 10px;
+  margin-right: 0.8vw;
 }
-.logement__second img {
-  width: 60%;
-  height: 100%;
-  border-radius: 20px 0px 0px 20px;
-  object-fit: cover;
-}
-.logement__second {
-  display: flex;
-  flex-direction: row;
-  width: 397px;
-  height: 179px;
-  background-color: white;
-  border-radius: 20px;
-  padding: 10px;
-  box-shadow: 6px 6px 5px grey;
-  margin: 0px 20px 20px 15px;
-}
+
 .logement {
-  display: flex;
-  flex-direction: row;
-  width: 397px;
-  height: 178px;
+  display: inline-block;
+  height: 100px;
   background-color: white;
   border-radius: 20px;
-  padding: 10px;
-  box-shadow: 6px 6px 5px grey;
-  margin: 0px 20px 20px 15px;
+  padding: 0.35em;
+  box-shadow: 2px 2px 5px grey;
+  width: 90%;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
-.figcaption__logement h2 {
+.figcaption__logement h3 {
   margin-left: 0px;
 }
 
-.figcaption__logement {
-  padding: 10px;
-  margin-left: 10px;
+.logement p{
+  font-size: 0.7em;
+  margin-left: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 /*container activities*/
-#activites {
-  display: flex;
-  width:100%;
-  justify-content: center;
-}
-.titre_activites
-{
-  font-size: 1.5em;
-  width: 100%;
-  height: 25px;
-  margin-left: 43px;
-}
 #container__secondaire a {
   text-decoration: none;
   color: black;
@@ -324,60 +376,80 @@ h1.titre {
 #container__secondaire {
   display: flex;
   flex-wrap: wrap;
-  width:100%;
-  margin-bottom: 50px;
-  height: 600px;
+  width:95%;
+  height: auto;
+  margin: 10px auto 50px auto;
+}
+
+#activites {
+  display: flex;
+  margin:auto;
+  justify-content: space-between;
+}
+.titre_activites
+{
+  font-size: 1.5em;
+  width: 100%;
+  height: 25px;
+  
+}
+.big__picture{
+  width: 22%;
+  box-shadow: 2px 2px 5px grey;
+  border-radius: 20px 20px 20px 20px;
+  
+}
+.activites__big_picture{
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top:0px
+}
+.big__picture img {
+  object-fit: cover;
+  height:350px;
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+}
+.second__column{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0;
+  width:22%;
+  border-radius: 20px 20px 20px 20px;
+  
+}
+.activites__medium_picture{
+  height: 50%;
+  box-shadow: 2px 2px 5px grey;
+  border-radius: 20px 20px 20px 20px;
+  margin:0px;
+}
+.activites__small_picture{
+  margin:0px;
+  height: 41%;
+  box-shadow: 2px 2px 5px grey;
+  border-radius: 20px 20px 20px 20px;
+}
+.activites__small_picture img {
+  width: 100%;
+  object-fit: cover;
+  height: 118px;
+  border-radius: 20px 20px 0px 0px;
   
 }
 
-.big__picture {
-  height: 30%;
-  padding-bottom: 50px;
-  box-shadow: 6px 6px 5px grey;
-  height: 435px;
-  width: 340px;
-  margin-right: 10px;
-  margin-left: 40px;
+.activites__medium_picture img {
+  object-fit: cover;
+  height: 152px;
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+}
+.figcaption__activites{
+  margin-left: 20px;
+}
 
-  border-radius: 20px;
-}
-.big__picture img {
-  width: 100%;
-  object-fit: cover;
-  height: 435px;
-  border-radius: 20px 20px 0px 0px;
-}
-.first__picture {
-  padding-bottom: 15px;
-  box-shadow: 6px 6px 5px grey;
-  margin-left: 10px;
-  width: 340px;
-  border-radius: 20px;
-}
-.first__picture img {
-  width: 100%;
-  object-fit: cover;
-  height: 220px;
-  border-radius: 20px 20px 0px 0px;
-}
-.second__picture {
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-bottom: 15px;
-  box-shadow: 6px 6px 5px grey;
-  width: 340px;
-  border-radius: 20px;
-}
-.second__picture img {
-  width: 100%;
-  object-fit: cover;
-  height: 150px;
-  border-radius: 20px 20px 0px 0px;
-}
-.second__column
-{
-  width: 330px;
-}
 
 /*footer*/
 #footer {
@@ -398,18 +470,130 @@ li {
   width: 100%;
 }
 h2 {
-  font-size: 1em;
-  margin: 6px 15px;
+  font-size: 0.9em;
 }
 h3 {
-  margin-left: 10px;
-  font-size: 1em;
+  font-size: 0.7em;
 }
-#footer h3 {
+#footer h2 {
   font-size: 1em;
   margin-left: 50px;
 }
 #filtres span {
   font-size: 0.9em;
   margin: 6px 10px;
+}
+
+/*responsive grand ecran*/
+
+@media all and (min-device-width: 481px)
+{
+  #activites a:nth-child(1),
+#activites a:nth-child(2),
+#activites a:nth-child(4),
+#activites a:nth-child(5)
+{
+  page-break-before: always;
+}
+
+#activites a:nth-child(1) .activites__vignette img,
+#activites a:nth-child(4) .activites__vignette img{
+  height: 310px;
+}
+
+#activites a:nth-child(3) .activites__vignette img,
+#activites a:nth-child(5) .activites__vignette img{
+  height: 100px;
+}
+ }
+
+/*responsive smartphone*/
+
+@media all and (max-device-width: 480px)
+{
+  .recherche{
+    width: 96%;
+    margin:auto;
+  }
+  .searchbutton{
+    display:none;
+  }
+  #loupe{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: center;
+    border-radius:0px 15px 15px 0px;
+    font-size: 1.2em;
+    background-color: #0065FC;
+  }
+  #filtres {
+    width: 60%;
+    background-color: red;
+  }
+  #liste__filtres {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-weight: normal;
+    display: inline-flex;
+  }  
+  
+  #container__principal {
+    
+    flex-direction: column-reverse;
+  }
+  h1.titre {
+  
+  margin: 0 auto 40px 0;
+  width: 100%;
+  
+}
+  
+  #hebergement {
+    width:96%;
+    background-color: white;
+    padding: auto;
+    
+  }
+  
+  .element {
+    width: 96%;
+    height:100%;
+    padding: auto;
+    box-shadow: 6px 6px 5px grey;
+    
+  }
+  .element img {
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+  object-fit: cover;
+}
+  
+  #populaires
+  {
+    width:auto;
+    background-color: #f2f2f2;
+    padding: auto;
+  }
+  .logement {
+  
+  
+  background-color: white;
+  border-radius: 20px;
+  }
+  .logement__second {
+  background-color: white;
+  border-radius: 20px;
+  }
+  
+ /*activites a marseille*/ 
+  #activites{
+    display: flex;
+    justify-content: space-between;
+  }
+ 
+  
+  
+
 }
