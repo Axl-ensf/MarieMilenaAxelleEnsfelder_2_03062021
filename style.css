@@ -26,7 +26,7 @@ h2 {
   font-size: 0.9em;
 }
 h3 {
-  font-size: 0.7em;
+  font-size: 15px;
 }
 .navigation {
   display: flex;
@@ -236,14 +236,14 @@ strong {
 }
 
 #hebergement h3 {
-  font-size: 0.9em;
+  font-size: 14px;
   margin-left: 5px;
   margin-top: 2px;
   padding-bottom: 0;
   margin-bottom: 0;
 }
 #hebergement p {
-  font-size: 0.8em;
+  font-size: 12px;
   margin-left: 5px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -329,13 +329,7 @@ h1.titre {
   border-radius: 20px;
   display: inline-block;
 }
-.rating__stars_populaire {
-  margin-top: 70px;
-  position: absolute;
-  top: 35px;
 
-  left: 1px;
-}
 #populaires h1 {
   margin-left: 9px;
 }
@@ -386,6 +380,10 @@ h1.titre {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+.rating__stars_populaire {
+  position: absolute;
+  top: 120px;
+  }
 /*container activities*/
 #container__secondaire a {
   text-decoration: none;
@@ -645,6 +643,10 @@ li {
     margin-top: 30px;
     width: 90%;
   }
+  .rating__stars_populaire {
+    position: absolute;
+    top: 125px;
+  }
   .logement {
     height: 160px;
     margin: 10px 20px 25px 15px;
@@ -729,64 +731,84 @@ li {
     margin-left: 0px;
     margin-right: 0px;
   }
-  .logement img {
-    margin-right: 0.5px;
+  #bloc__vignettes_logements {
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #populaires h3 {
+    font-size: 14px;
+    margin-left: 5px;
+    margin-top: 2px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  #populaires p {
+    font-size: 12px;
+    margin-left: 5px;
   }
 
   #populaires {
+    display: inline-block;
     width: 100%;
     padding: 0px;
     margin: 0px;
     border-radius: 0px;
   }
 
-  #populaires a {
-    width: 40%;
+  #populaires h1 {
+    margin-left: 20px;
+    font-size: 1.2em;
   }
 
-  #populaires h3 {
-    font-size: 0.8em;
-  }
-  #populaires p {
-    font-size: 0.7em;
-  }
-  #bloc__vignettes_logements {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-  .fa-chart-line {
-    float: right;
+  .logement img {
+    width: 100%;
+    height: 14vw;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
   }
 
   .logement {
-    margin: 10px 10px 10px 10px;
+    width: 28vw;
+    height: 170px;
+    padding: 5px;
+    flex-direction: column;
+    margin: 10px auto;
+  }
+
+  .figcaption__logement {
+    width: 25vw;
+  }
+
+  .rating__stars_populaire {
+    position: absolute;
+    left: 5px;
+    top: 46px;
   }
 
   .fa-chart-line {
-    float: right;
     margin-right: 20px;
   }
-  .logement img {
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-  }
+
   #hebergement {
     width: 100%;
     background-color: white;
     padding-left: 0px;
     padding-right: 0px;
   }
+
   .element {
     width: 40%;
     height: 200px;
   }
+
   .element img {
     height: 72%;
   }
+
   #container__secondaire {
     display: flex;
     flex-wrap: wrap;
