@@ -628,6 +628,7 @@ li {
   }
   .element {
     height: 160px;
+    max-width: 310px;
     width: 92%;
   }
 
@@ -744,6 +745,8 @@ li {
     margin-top: 2px;
     padding-bottom: 0;
     margin-bottom: 0;
+    max-height: 34px;
+    overflow: hidden;
   }
 
   #populaires p {
